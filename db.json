@@ -1,0 +1,109 @@
+{
+    "climate":[
+      {
+       
+        "id": 2801268,
+        "name": "London, City of London, Greater London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.52,
+        "lon": -0.11,
+        "url": "london-city-of-london-greater-london-united-kingdom",
+        "temp": 15,
+        "humidity":39 ,
+        "precipitation": 5,
+        "image":"https://images.pexels.com/photos/5209876/pexels-photo-5209876.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      },
+      {
+        
+        "id": 2796590,
+        "name": "Holborn, Camden, Greater London",
+        "region": "Camden, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.52,
+        "lon": -0.12,
+        "url": "holborn-camden-greater-london-united-kingdom",
+        "temp": 13,
+        "humidity":41 ,
+        "precipitation": 5,
+        "image":"https://images.pexels.com/photos/186980/pexels-photo-186980.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      },
+      {
+        
+       
+        "name": "St Giles, Camden, Greater London",
+        "region": "Camden, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.52,
+        "lon": -0.12,
+        "url": "st-giles-camden-greater-london-united-kingdom",
+        "temp": 15,
+        "humidity":39 ,
+        "precipitation": 5,
+        "image":"https://images.pexels.com/photos/3061171/pexels-photo-3061171.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      },
+      {
+        
+        "id": 2786308,
+        "name": "Clerkenwell, Islington, Greater London",
+        "region": "Islington, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.53,
+        "lon": -0.11,
+        "url": "clerkenwell-islington-greater-london-united-kingdom",
+        "temp": 15,
+        "humidity":85 ,
+        "precipitation": 5,
+        "image":"https://images.pexels.com/photos/5466513/pexels-photo-5466513.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      }, 
+      {
+        
+        
+        "name": "Finsbury, Islington, Greater London",
+        "region": "Islington, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.53,
+        "lon": -0.11,
+        "url": "finsbury-islington-greater-london-united-kingdom",
+        "temp": 15,
+        "humidity":39 ,
+        "precipitation": 5,
+        "image":"https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      },
+      {
+        
+        "id": 2813087,
+        "name": "St Pancras, Camden, Greater London",
+        "region": "Camden, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.53,
+        "lon": -0.12,
+        "url": "st-pancras-camden-greater-london-united-kingdom",
+        "temp": 9,
+        "humidity":88,
+        "precipitation": 5,
+        "image":"https://images.pexels.com/photos/726484/pexels-photo-726484.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      },
+      {
+       
+        "id": 2781746,
+        "name": "Bloomsbury, Camden, Greater London",
+        "region": "Camden, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.53,
+        "lon": -0.12,
+        "url": "bloomsbury-camden-greater-london-united-kingdom",
+        "temp": 10,
+        "humidity":95 ,
+        "precipitation": 5,
+        "image":"https://images.pexels.com/photos/5753503/pexels-photo-5753503.jpeg?auto=compress&cs=tinysrgb&w=1600"}
+      ,
+      {
+        "id": 2813028,
+        "description": "Welcome to Weather Forecast!",
+        "region": "Get up-to-date weather information for your favorite places with just one click. Choose from a selection of locations to see detailed weather data, including temperature, humidity, and precipitation. Enjoy beautiful images of each location as you explore the world's weather",
+        "country": "United Kingdom",
+        "image":"https://imgs.search.brave.com/DUVaorxhK30hGi4p2phngs5gY79C3LK1ACIczcvwXFw/rs:fit:1030:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5U/MkMzTWxwZFJzbzR6/SV9BU0NFcTFRSGFE/YSZwaWQ9QXBp"
+      }
+    ]
+  }

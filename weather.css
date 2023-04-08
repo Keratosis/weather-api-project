@@ -1,0 +1,89 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #4e67c8;
+    color: #fff;
+    background-image: url("https://media.gettyimages.com/id/181134468/photo/london-rain.jpg?s=2048x2048&w=gi&k=20&c=E2EY87sQ6unjy9fM_C_-rrqGdqujj0qCAi9BPCANAjs=");
+    background-repeat: no-repeat;
+    background-size:"cover";
+    
+}
+  
+  .header {
+    background-color: #3c5186;
+    padding: 20px;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .place {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .local-places {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .weather-details {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .latitude,
+  .longitude,
+  .weather {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .location-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  .location {
+   
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color:  #f3efef;
+    opacity: .4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  .nav button:hover{
+    color: #661515;}
+ 
+  .location:hover{
+    color: #493333;
+    cursor:crosshair
+  }
+  
