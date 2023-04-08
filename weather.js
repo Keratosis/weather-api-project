@@ -1,4 +1,4 @@
-//get elements
+//get elements from html
 const countryName = document.getElementById("place");
 const nameOfPlaces = document.getElementById("local-places");
 const latitudeOfPlace = document.getElementById("latitude");
@@ -18,6 +18,8 @@ fetch("http://localhost:3000/climate/2813028")
   })
   .catch((error) => console.error(error));
 
+
+
 //creating new buttons
 fetch("http://localhost:3000/climate")
   .then((response) => response.json())
@@ -32,6 +34,7 @@ fetch("http://localhost:3000/climate")
   })
   .catch((error) => console.error(error));
 
+  
 //displaying weather data
 function displayClimate(climate) {
   countryName.textContent = climate.country;

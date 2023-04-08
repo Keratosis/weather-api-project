@@ -16,6 +16,11 @@ To use Weather Forecast, follow these steps:
 
 >Clone the repository to your local machine.
 >Start a local server on port 3000.
+>Run the following command to get the backend started:
+          json-server --watch db.json
+
+>Test your server by visiting this route in the browser:
+          http://localhost:3000/climate
 >Open the index.html file in a web browser.
 >Click on one of the location buttons to see its weather data and image.
 
