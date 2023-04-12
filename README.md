@@ -1,52 +1,31 @@
 # weather-api-project
-Weather Forecast
-Weather Forecast is a web application that allows users to get up-to-date weather information for their favorite places. The app fetches data from a local server and displays it dynamically on the page. Users can choose from a selection of locations to see detailed weather data, including temperature, humidity, and precipitation, as well as beautiful images of each location.
+#Weather App
+This is a simple weather app that displays the current weather information for a given location. The app uses the Weatherstack API to retrieve the weather data.
 
-Technologies Used
-Weather Forecast is built using the following technologies:
+#How to Use
+To use the app, simply enter a location in the text box and click the "Get Weather" button. The app will retrieve the current weather data for the location and display it on the page.
 
-HTML
-CSS
-JavaScript
-Fetch API
+#Technologies Used
+The app is built using HTML, CSS, and JavaScript. It also uses the jQuery library to make AJAX requests to the Weatherstack API.
 
-How to Use
+#Weather Data
+The app displays the following weather data for the selected location:
 
-To use Weather Forecast, follow these steps:
+#Temperature
+Weather icon
+Weather description
+Location name and country
+Wind speed and direction
+Pressure
+Precipitation
+Humidity
+Cloud cover
+Feels like temperature
+UV index
+Visibility
+Daytime/nighttime status
 
->Clone the repository to your local machine.
->Start a local server on port 3000.
->Run the following command to get the backend started:
-          json-server --watch db.json
 
->Test your server by visiting this route in the browser:
-          http://localhost:3000/climate
->Open the index.html file in a web browser.
->Click on one of the location buttons to see its weather data and image.
 
-#Features
-Weather Forecast has the following features:
-
-Display weather data for a selection of locations.
-Show beautiful images of each location.
-Update weather data and image dynamically when a location button is clicked.
-Provide a brief description of the app's purpose on the homepage.
-
-#Future Work
-#Some possible improvements for Weather Forecast are:
-
-Allow users to search for specific locations and fetch their weather data dynamically.
-Provide more detailed weather information, such as wind speed and direction, UV index, and air quality.
-Add more locations to the selection and allow users to create their own custom buttons.
-Implement a feature to toggle between Fahrenheit and Celsius units for temperature.
-Improve the app's accessibility and responsiveness for different screen sizes.
-
-#Credits
-Weather Forecast was built by Braxton Opondo as a project for phase 1 week 4 challenge. The weather data and images are provided by
- [
-    API Generated from :https://www.weatherapi.com/#tab-content-4
-    pictures are from : https://www.pexels.com/
- ] 
-
-License
-Weather Forecast is licensed under the MTn license. Feel free to use and modify the code for your own purposes. However, please credit the original author and data source if you decide to share or distribute the app.
+Credits
+This app was created by Braxton Omondi. The weather data is provided by the Weatherstack API.

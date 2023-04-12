@@ -1,30 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="weather.css" />
-    <title>Weather Forecast</title>
+    <title>Weather App</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0e1e1;
+      }
+
+      #header {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      #header h1 {
+        margin: 0;
+      }
+
+      #main {
+        margin: auto;
+        max-width: 600px;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      #locationInput {
+        padding: 10px;
+        font-size: 16px;
+        color: rgb(18, 19, 19);
+        border-radius: 5px;
+        border: none;
+        margin-right: 10px;
+        width: 70%;
+        background-color: #f8d7d7;
+      }
+      #locationInput:hover{
+        background-color: rgb(71, 114, 114);
+      }
+
+      #weatherData {
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #f7f7f7;
+        box-shadow: 0px 0px 10px #ccc;
+      }
+
+      #weatherData h2 {
+        font-size: 24px;
+        margin: 0;
+        margin-bottom: 10px;
+      }
+
+      #weatherData img {
+        margin-bottom: 10px;
+        width: 100px;
+        height: 100px;
+       
+      }
+
+      #weatherData p {
+        margin: 10px 0px;
+        font-size: 16px;
+        line-height: 1.5;
+        
+      }
+
+      #getWeatherButton {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        background-color: #2d5192;
+        color: white;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      #getWeatherButton:hover {
+        background-color: #57742a;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
- <header class="header">
-		<nav id="navy" class="nav"></nav>
- </header>
+    <div id="header">
+      <h1>Weather App</h1>
+    </div>
+    <div id="main">
+      <p>Enter a location:</p>
+      <input type="text" id="locationInput">
+      <button id="getWeatherButton" onclick="getWeather()">Get Weather</button>
+      <div id="weatherData"></div>
+    </div>
 
-	<div id="location" class="location">
-		 <h1 id="place" class="place"></h1>
-		 <p id="local-places" class="local-places"></p>
-		<div class="weather-details">
-			 <p id="latitude" class="latitude"></p>
-			 <p id="longitude" class="longitude"></p>
-			 <p id="weather" class="weather"></p>
-			
-		 </div>
-			 <img id="img" class="location-image" src="" alt="" />
-	</div>
-    <script src="weather.js"></script>
+    <script>
+      function handleWeatherData(data) {
+        var temperature = data.current.temperature;
+        var weatherIcon = data.current.weather_icons[0];
+        var weatherDescription = data.current.weather_descriptions[0];
+        var locationName = data.location.name;
+        var countryName = data.location.country;
+        var windSpeed = data.current.wind_speed;
+        var windDegree = data.current.wind_degree;
+        var windDirection = data.current.wind_dir;
+        var pressure = data.current.pressure;
+        var precipitation = data.current.precip;
+        var humidity = data.current.humidity;
+        var cloudCover = data.current.cloudcover;
+        var feelsLike = data.current.feelslike;
+        var uvIndex = data.current.uv_index;
+        var visibility = data.current.visibility;
+        var isDay = data.current.is_day;
 
-	
+        var weatherDataElement = document.getElementById("weatherData");
+        weatherDataElement.innerHTML =
+          "<h2>" +
+          locationName +
+          ", " +
+          countryName +
+          "</h2>" +
+          "<img src='" +
+		  weatherIcon +
+          "'>" +
+          "<p>" +
+          temperature +
+          "°C - " +
+          weatherDescription +
+          "</p>" +
+          "<p>Wind Speed: " +
+          windSpeed +
+          " mph</p>" +
+          "<p>Wind Degree: " +
+          windDegree +
+          "</p>" +
+          "<p>Wind Direction: " +
+          windDirection +
+          "</p>" +
+          "<p>Pressure: " +
+          pressure +
+          " mb</p>" +
+          "<p>Precipitation: " +
+          precipitation +
+          " mm</p>" +
+          "<p>Humidity: " +
+          humidity +
+          "%</p>" +
+          "<p>Cloud Cover: " +
+          cloudCover +
+          "%</p>" +
+          "<p>Feels Like: " +
+          feelsLike +
+          "°C</p>" +
+          "<p>UV Index: " +
+          uvIndex +
+          "</p>" +
+          "<p>Visibility: " +
+          visibility +
+          " miles</p>" +
+          "<p>Is Day: " +
+          (isDay === "yes" ? "Yes" : "No") +
+          "</p>";
+      }
+
+      function getWeather() {
+        var location = document.getElementById("locationInput").value;
+        var apiUrl =
+          "http://api.weatherstack.com/current?access_key=248cb588c338eb37da4aee9554ad258c&query=" +
+          location +
+          "&callback=handleWeatherData";
+
+        var script = document.createElement("script");
+        script.src = apiUrl;
+        document.head.appendChild(script);
+      }
+    </script>
   </body>
 </html>
