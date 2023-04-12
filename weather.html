@@ -47,9 +47,12 @@
         margin-top: 20px;
         padding: 20px;
         border: 1px solid #ccc;
+        background-image: url("https://images.pexels.com/photos/175407/pexels-photo-175407.jpeg?auto=compress&cs=tinysrgb&w=300");
+        background-size: cover;
         border-radius: 10px;
         background-color: #f7f7f7;
         box-shadow: 0px 0px 10px #ccc;
+
       }
 
       #weatherData h2 {
@@ -69,6 +72,7 @@
         margin: 10px 0px;
         font-size: 16px;
         line-height: 1.5;
+        color: rgb(148, 7, 35);
         
       }
 
@@ -192,7 +196,6 @@ function getWeather() {
   
   // Append the new script element to the HTML head element to execute the API call
   document.head.appendChild(script);
-
 
   //selecting  element
   const button = document.querySelector('#getWeatherButton');
