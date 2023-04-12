@@ -44,6 +44,7 @@
       }
 
       #weatherData {
+        display:none;
         margin-top: 20px;
         padding: 20px;
         border: 1px solid #ccc;
@@ -127,6 +128,11 @@ function handleWeatherData(data) {
   var uvIndex = data.current.uv_index;
   var visibility = data.current.visibility;
   var isDay = data.current.is_day;
+
+  // set the display property to block
+  var weatherDataElement = document.getElementById("weatherData");
+    weatherDataElement.style.display = "block";
+
 
   // Update the HTML on the page to display the weather data
   var weatherDataElement = document.getElementById("weatherData");
