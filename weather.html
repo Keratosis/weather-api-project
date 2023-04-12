@@ -48,7 +48,7 @@
         margin-top: 20px;
         padding: 20px;
         border: 1px solid #ccc;
-        background-image: url("https://images.pexels.com/photos/175407/pexels-photo-175407.jpeg?auto=compress&cs=tinysrgb&w=300");
+        background-image: url("https://images.unsplash.com/photo-1580193813605-a5c78b4ee01a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHdlYXRoZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
         background-size: cover;
         border-radius: 10px;
         background-color: #f7f7f7;
@@ -211,11 +211,14 @@ function getWeather() {
   button.style.backgroundColor = 'crimson';
 });
 weatherData.addEventListener("mouseover", () => {
-  weatherData.style.backgroundImage = "url('https://media.istockphoto.com/id/1196820802/photo/blue-sky-background-with-tiny-clouds.jpg?s=612x612&w=0&k=20&c=E19qgcA9jWLDWLulydYuZUx3Vg_N8FI16bvAuPpAGnk=')";
+  weatherData.style.backgroundImage = "url('https://images.unsplash.com/photo-1558486012-817176f84c6d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8d2VhdGhlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60')";
   weatherData.style.backgroundSize = "cover";
   weatherData.style.backgroundRepeat = "no-repeat";
 });
 
+weatherData.addEventListener('mouseout', () => {
+  weatherData.style.backgroundImage = "url('https://images.unsplash.com/photo-1563119275-f52fb8306d87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE3fHx3ZWF0aGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60')";
+});
 
 }
 
