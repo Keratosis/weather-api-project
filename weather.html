@@ -192,6 +192,22 @@ function getWeather() {
   
   // Append the new script element to the HTML head element to execute the API call
   document.head.appendChild(script);
+
+
+  //selecting  
+  const button = document.querySelector('#getWeatherButton');
+
+  //adding event listener
+  button.addEventListener('mouseenter', () => {
+  button.style.backgroundColor = 'yellow';
+});
+
+button.addEventListener('mouseleave', () => {
+  button.style.backgroundColor = 'green';
+});
+
+
+
 }
 
     </script>
