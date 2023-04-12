@@ -95,91 +95,105 @@
     </div>
     <div id="main">
       <p>Enter a location:</p>
+      <!--  a text input field for the user to enter a location -->   
       <input type="text" id="locationInput">
+
+      <!-- button that triggers a function to retrieve the weather data-->
       <button id="getWeatherButton" onclick="getWeather()">Get Weather</button>
       <div id="weatherData"></div>
     </div>
 
-    <script>
-      function handleWeatherData(data) {
-        var temperature = data.current.temperature;
-        var weatherIcon = data.current.weather_icons[0];
-        var weatherDescription = data.current.weather_descriptions[0];
-        var locationName = data.location.name;
-        var countryName = data.location.country;
-        var windSpeed = data.current.wind_speed;
-        var windDegree = data.current.wind_degree;
-        var windDirection = data.current.wind_dir;
-        var pressure = data.current.pressure;
-        var precipitation = data.current.precip;
-        var humidity = data.current.humidity;
-        var cloudCover = data.current.cloudcover;
-        var feelsLike = data.current.feelslike;
-        var uvIndex = data.current.uv_index;
-        var visibility = data.current.visibility;
-        var isDay = data.current.is_day;
+<script>
+    // Define a function to handle the weather data retrieved from the API
+function handleWeatherData(data) {
+  // Extract the relevant data from the API response
+  var temperature = data.current.temperature;
+  var weatherIcon = data.current.weather_icons[0];
+  var weatherDescription = data.current.weather_descriptions[0];
+  var locationName = data.location.name;
+  var countryName = data.location.country;
+  var windSpeed = data.current.wind_speed;
+  var windDegree = data.current.wind_degree;
+  var windDirection = data.current.wind_dir;
+  var pressure = data.current.pressure;
+  var precipitation = data.current.precip;
+  var humidity = data.current.humidity;
+  var cloudCover = data.current.cloudcover;
+  var feelsLike = data.current.feelslike;
+  var uvIndex = data.current.uv_index;
+  var visibility = data.current.visibility;
+  var isDay = data.current.is_day;
 
-        var weatherDataElement = document.getElementById("weatherData");
-        weatherDataElement.innerHTML =
-          "<h2>" +
-          locationName +
-          ", " +
-          countryName +
-          "</h2>" +
-          "<img src='" +
-		  weatherIcon +
-          "'>" +
-          "<p>" +
-          temperature +
-          "°C - " +
-          weatherDescription +
-          "</p>" +
-          "<p>Wind Speed: " +
-          windSpeed +
-          " mph</p>" +
-          "<p>Wind Degree: " +
-          windDegree +
-          "</p>" +
-          "<p>Wind Direction: " +
-          windDirection +
-          "</p>" +
-          "<p>Pressure: " +
-          pressure +
-          " mb</p>" +
-          "<p>Precipitation: " +
-          precipitation +
-          " mm</p>" +
-          "<p>Humidity: " +
-          humidity +
-          "%</p>" +
-          "<p>Cloud Cover: " +
-          cloudCover +
-          "%</p>" +
-          "<p>Feels Like: " +
-          feelsLike +
-          "°C</p>" +
-          "<p>UV Index: " +
-          uvIndex +
-          "</p>" +
-          "<p>Visibility: " +
-          visibility +
-          " miles</p>" +
-          "<p>Is Day: " +
-          (isDay === "yes" ? "Yes" : "No") +
-          "</p>";
-      }
+  // Update the HTML on the page to display the weather data
+  var weatherDataElement = document.getElementById("weatherData");
+  weatherDataElement.innerHTML =
+    "<h2>" +
+    locationName +
+    ", " +
+    countryName +
+    "</h2>" +
+    "<img src='" +
+    weatherIcon +
+    "'>" +
+    "<p>" +
+    temperature +
+    "°C - " +
+    weatherDescription +
+    "</p>" +
+    "<p>Wind Speed: " +
+    windSpeed +
+    " mph</p>" +
+    "<p>Wind Degree: " +
+    windDegree +
+    "</p>" +
+    "<p>Wind Direction: " +
+    windDirection +
+    "</p>" +
+    "<p>Pressure: " +
+    pressure +
+    " mb</p>" +
+    "<p>Precipitation: " +
+    precipitation +
+    " mm</p>" +
+    "<p>Humidity: " +
+    humidity +
+    "%</p>" +
+    "<p>Cloud Cover: " +
+    cloudCover +
+    "%</p>" +
+    "<p>Feels Like: " +
+    feelsLike +
+    "°C</p>" +
+    "<p>UV Index: " +
+    uvIndex +
+    "</p>" +
+    "<p>Visibility: " +
+    visibility +
+    " miles</p>" +
+    "<p>Is Day: " +
+    (isDay === "yes" ? "Yes" : "No") +
+    "</p>";
+}
 
-      function getWeather() {
-        var location = document.getElementById("locationInput").value;
-        var apiUrl =
-          "http://api.weatherstack.com/current?access_key=248cb588c338eb37da4aee9554ad258c&query=" +
-          location +
-          "&callback=handleWeatherData";
+// Define a function to get the weather data from the API
+function getWeather() {
+  // Get the user's location input from the HTML input element
+  var location = document.getElementById("locationInput").value;
+  
+  // Construct the API URL with the user's location input and API access key
+  var apiUrl =
+    "http://api.weatherstack.com/current?access_key=248cb588c338eb37da4aee9554ad258c&query=" +
+    location +
+    "&callback=handleWeatherData";
 
-        var script = document.createElement("script");
-        script.src = apiUrl;
-        document.head.appendChild(script);
-      }
+  // Create a new script element with the API URL as the source
+  var script = document.createElement("script");
+  script.src = apiUrl;
+  
+  // Append the new script element to the HTML head element to execute the API call
+  document.head.appendChild(script);
+}
+
     </script>
   </body>
 </html>
