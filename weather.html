@@ -194,18 +194,18 @@ function getWeather() {
   document.head.appendChild(script);
 
 
-  //selecting  
+  //selecting  element
   const button = document.querySelector('#getWeatherButton');
 
   //adding event listener
   button.addEventListener('mouseenter', () => {
-  button.style.backgroundColor = 'yellow';
+  button.style.backgroundColor = 'crimson';
 });
-
-button.addEventListener('mouseleave', () => {
-  button.style.backgroundColor = 'green';
+weatherData.addEventListener("mouseover", () => {
+  weatherData.style.backgroundImage = "url('https://images.pexels.com/photos/7235085/pexels-photo-7235085.jpeg?auto=compress&cs=tinysrgb&w=300')";
+  weatherData.style.backgroundSize = "cover";
+  weatherData.style.backgroundRepeat = "no-repeat";
 });
-
 
 
 }
