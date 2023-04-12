@@ -31,3 +31,5 @@ Credits
 This app was created by Braxton Omondi. The weather data is provided by the Weatherstack API.
 
 github link:https://github.com/Keratosis/weather-api-project
+
+image source :https://unsplash.com/
